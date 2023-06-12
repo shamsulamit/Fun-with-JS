@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+    <script>
+        var cupUp=new Image();
+        cupUp.src="Small-mario.png";
+        var cupDown=new Image();
+        cupDown.src="mario_PNG114.png";
+        var alpha;
+        function interval(){
+            alpha=window.setInterval("document.cup.src=cupUp.src",3000);
+        }
+        function timeOut(){
+            window.setTimeout("document.cup.src=cupUp.src"5000);
+            window.clearInterval(alpha);
+        }
+	
+	</script>
+</head>
+	
+	<a href="#" onClick="interval()">Interval</a>
+	<a href="#" onClick="timeOut()">Timeout</a>
+
+<body>
+	
+	
+	
+	
+</body>
+</html>

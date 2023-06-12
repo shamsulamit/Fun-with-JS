@@ -1,0 +1,21 @@
+<html>
+<head>
+    <script>
+    function shadWalls(front,side){
+        var front=prompt("how Many feet across the front?","");
+        var side=prompt("how Many feet along the side?","");
+        var tiles=prompt("how Many feet along the tiles?","");
+        var numfront=(front*12*2)/tiles;
+        var numside=(side*12*2)/tiles;
+        var total=numfront+numside;
+        var message="You will need "+ total+", "+tiles+ " inch boards for you Shad Walls.";
+        document.write(message);
+    }
+        shadWalls();
+    </script>
+</head>
+    
+    <body>
+    </body>
+
+</html>

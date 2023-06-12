@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Open & Close</title>
+
+	<script type="text/javascript">
+		
+		function openWin(){
+			a = open("https://www.google.com/","aaa","width=400, height=400")
+		}
+
+		function closeWin(){
+			if(a.closed){
+				alart("Window has alresdy closed.")
+			}else{
+				a.close()
+			}
+		}
+
+	</script>
+
+
+</head>
+<body>
+
+	<input type="button" name="open" value="Open" onclick="openWin()">
+	<input type="button" name="close" value="Close" onclick="closeWin()">
+
+</body>
+</html>

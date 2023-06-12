@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form</title>
+
+<script type="text/javascript">
+
+function myfunction(){
+
+	var name = document.myform.name.value;
+	var letters = /^[A-Z a-z]+$/;
+	if(!name.match(letters)){
+		alert("Must Be Alphabatic.");
+	}else{
+		var name = "Name: "+name+".<br/>";
+	}
+
+	var email = document.myform.email.value;
+	if(email.indexOf("@")<1){
+		alert("Insert a valid Email");
+		return false;
+	}else{
+		email = "Email: "+email+"<br/>";
+	}
+
+	var password = document.myform.password.value;
+	if(password.length !=8){
+		alert("Must Be 8 Cherecter");
+		return false;
+	}else{
+		password = "Pass-Word: "+password+"<br/>"
+	}
+
+	var phone = document.myform.phone.value;
+	var letters = /^[0-9]+$/;
+	if(!phone.match(letters)){
+		alert("Must Be Number.");
+		return false;
+	}else{
+		phone = "Phone Number: "+phone+".<br/>";
+	}
+
+	var gender = document.myform.gender.value;
+		gender = "Gender: "+ gender+"<br/>"
+
+	var details = document.myform.details.value;
+		details = "Details: "+details+"<br/>";
+
+
+
+
+document.write(name+email+password+phone+details);
+}
+
+
+</script>
+
+</head>
+<body>
+
+<form name="myform">
+	Name:
+	<input type="text" name="name" /><br/>
+	Email:
+	<input type="text" name="email"/><br/>
+	Pass-Word:
+	<input type="password" name="password"/><br/>
+	Phone Number:
+	<input type="tel" name="phone"/><br/>
+	Gender: 
+	<input type="radio" name="gender" value="Male" checked>Male
+	<input type="radio" name="gender" value="Female">Female <br/>
+	Details:
+	<textarea name="details"></textarea><br/>
+	<input type="button" value="submit" onclick="myfunction()">
+</form>
+
+</body>
+</html>

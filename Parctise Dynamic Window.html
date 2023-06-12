@@ -1,0 +1,71 @@
+<html>
+	<head>
+		<title>testing</title>
+	</head>
+	<body>
+			<script>
+					function myfuntion()
+					{
+					var myname=document.myform.myname.value;
+					var letters=/^[A-Z a-z]+$/;
+					if (!myname.match(letters)){				
+						alert("The letter should be alphabetic");
+						return false;
+					
+					}else{
+						var myname=("Name:"+myname+"<br/>")
+					}
+					
+					var myphone=document.myform.myphone.value;
+					if(isNaN(myphone)){
+				
+					      alert("please enter only number");
+						  return false;
+					
+					}else{
+							if(myphone.length!=11){
+								alert("please enter 11 digits");
+								return false;
+							}else{
+								 var myphone="Phone:"+myphone+"<br/>";
+								}
+						}
+					
+					var myemail=document.myform.myemail.value;
+					if(myemail.indexOf("@"),myemail.indexOf(".")<1){
+					alert("Insert a valid mail");
+					return false;
+					}else{
+					var myemail="Email:"+myemail+"<br/>";
+					
+					}
+					
+					var gender=document.myform.gender.value
+						gender="Gender:"+gender+"<br/>";
+					
+					var myregistration=document.myform.myregistration.value
+						myregistration="Registration:"+myregistration+"<br/>";
+					
+					var details=document.myform.details.value
+						details="Details:"+details+"<br/>";
+						
+					var popup=open("","mywindow",width="400, height=400");
+					
+					popup.document.write(myname+myphone+myemail+gender+myregistration+details);
+					
+					}
+
+					
+			</script>
+					<form name="myform">
+					Name:<input type="text" name="myname" required /><br/><br/>
+					Phone:<input type="text" name="myphone"/><br/><br/>
+					Email:<input type="text" name="myemail" required /><br/><br/>
+					Gender:<input type="radio" name="gender" value="Male" checked/>Male
+							<input type="radio" name="gender" value="Female"/>Female<br/><br/>
+					Registration date:<input type="date" name="myregistration"/><br/><br/>
+					Details:<textarea name="details"></textarea><br/><br/>
+					<input type="button" value="Submit" onClick="myfuntion()"/>
+					</form>
+	</body>
+</html>

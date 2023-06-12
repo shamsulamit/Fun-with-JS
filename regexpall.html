@@ -1,0 +1,40 @@
+<html>
+	<head>
+		<title>string</title>
+		
+		<script language="javascript">
+		
+			var a = "Play it again Sam.";
+			var b = a.match(/sam/i);//string.replace
+			
+			
+			var c = "This script is embedded in Java.";
+			var stringer2 = c.replace(/Java/g,"HTML");
+			
+			var d = "www.sandlight.com";
+			var stringer3 = d.slice(d.search(/.com/));
+			
+			var e = "She has two important issue.";
+			var stringer4 = e.split(/two important/i);
+			
+			var display = "Regular Expression Methods in String Objects.";
+			
+			display += a + " becomes: " + b + "<br/>"
+			display += c + " becomes: " + stringer2 + "<br/>"
+			display += d + " becomes , with the help of string.slice(): " + stringer3 + "<br/>"
+			display += e + " becomes an array: " + stringer4[0] + stringer4[1] +"<br/>"
+			
+			
+			var showOff = new String(display);
+			
+			document.write(showOff.fontcolor("#972126"));
+			
+		</script>
+		
+	</head>
+
+	<body>
+	</body>
+	
+	
+</html>

@@ -1,0 +1,151 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title> Grading System  </title>
+
+      <style>
+	  	.inputText{
+			width:300px;
+		}
+     </style>
+     
+     
+     
+	<script language="javascript">
+		function f1(){
+				var studentName= document.exam.name.value;
+				var writtenNum= document.exam.written.value;
+				var mcqNum= document.exam.mcq.value;
+            
+				var text = "Congratulation! Your Grade is "
+			
+				var text1 = "Sorry! Your Grade is "
+				
+				var text2 = "Your written Marks is "
+				
+				var text3 = "Your MCQ Marks is "
+				
+				if(writtenNum>=0 && writtenNum<=32 || mcqNum>=0 && mcqNum<=32 ){
+					document.formvalue.namevalue.value = (studentName);
+					document.formvalue.writtenvalue.value = (text2+writtenNum);
+					document.formvalue.mcqvalue.value = (text3+mcqNum);
+					document.formvalue.gradeNumber.value = (text1+" F");
+				}
+				
+				else if(writtenNum>=33 && writtenNum<=39 || mcqNum>=33 && mcqNum<=39 ){
+					document.formvalue.namevalue.value = (studentName);
+					document.formvalue.writtenvalue.value = (text2+writtenNum);
+					document.formvalue.mcqvalue.value = (text3+mcqNum);
+					document.formvalue.gradeNumber.value = (text+" D");
+				}
+				
+				else if(writtenNum>=40 && writtenNum<=49 || mcqNum>=40 && mcqNum<=49 ){
+					document.formvalue.namevalue.value = (studentName);
+					document.formvalue.writtenvalue.value = (text2+ writtenNum);
+					document.formvalue.mcqvalue.value = (text3+mcqNum);
+					document.formvalue.gradeNumber.value = (text+" C");
+				}
+				
+				else if(writtenNum>=50 && writtenNum<=59 || mcqNum>=50 && mcqNum<=59 ){
+					document.formvalue.namevalue.value = (studentName);
+					document.formvalue.writtenvalue.value = (text2+writtenNum);
+					document.formvalue.mcqvalue.value = (text3+mcqNum);
+					document.formvalue.gradeNumber.value = (text+" B");
+				}
+				
+				else if(writtenNum>=60 && writtenNum<=69 || mcqNum>=60 && mcqNum<=69 ){
+					document.formvalue.namevalue.value = (studentName);
+					document.formvalue.writtenvalue.value = (text2+writtenNum);
+					document.formvalue.mcqvalue.value = (text3+mcqNum);
+					document.formvalue.gradeNumber.value = (text+" A-");
+				}
+				
+				else if(writtenNum>=70 && writtenNum<=79 || mcqNum>=70 && mcqNum<=79 ){
+					document.formvalue.namevalue.value = (studentName);
+					document.formvalue.writtenvalue.value = (text2+writtenNum);
+					document.formvalue.mcqvalue.value = (text3+mcqNum);
+					document.formvalue.gradeNumber.value = (text+" A");
+				}
+				
+				else if(writtenNum>=80 && writtenNum<=100 || mcqNum>=80 && mcqNum<=100 ){
+					document.formvalue.namevalue.value = (studentName);
+					document.formvalue.writtenvalue.value = (text2+ writtenNum);
+					document.formvalue.mcqvalue.value = (text3+mcqNum);
+					document.formvalue.gradeNumber.value = (text+" A+");
+				} else
+					alert("Please Enter Number 1 to 100")
+				
+		}
+			
+				
+	</script>
+	
+</head>
+
+<body>
+	
+    
+    <form name="exam">
+    	<table cellpadding="2px" cellspacing="2px" border="1" height="200px" width="600px" align="center">
+        
+        	<tr>
+            	<td colspan="2"> <h3> Insert Your Information </h3></td>
+                
+            </tr>
+            
+        	<tr>
+            	<td> Name: </td>
+                <td> <input type="text" name="name"/></td>
+            </tr>
+            
+            <tr>
+            	<td> Written Number :</td>
+                <td> <input type="text" name="written"/> </td>
+            </tr>
+            
+            <tr>
+            	<td> MCQ Number :</td>
+                <td> <input type="text" name="mcq"/> </td>
+            </tr>
+            
+            <tr>
+            	<td colspan="2"><input type="button" name="clicker" value="Submit" onClick="f1()"/></td>
+            </tr>
+             
+        </table>
+    </form> <br/>  <br/>  <br/> 
+    
+    <form name="formvalue">
+    <table cellpadding="2px" cellspacing="2px" border="1" height="200px" width="600px" align="center">
+            
+            <tr>
+            	<td colspan="2"> <h3> Know Your Grade </h3></td>
+                
+            </tr>
+        	<tr>
+            	<td> Name: </td>
+                <td> <input type="text" name="namevalue" class="inputText"/></td>
+            </tr>
+            
+            <tr>
+            	<td> Written Number :</td>
+                <td> <input type="text" name="writtenvalue" class="inputText"/> </td>
+            </tr>
+            
+            <tr>
+            	<td> MCQ Number :</td>
+                <td> <input type="text" name="mcqvalue" class="inputText"/> </td>
+            </tr>
+            
+           	<tr>
+					<td > Your Grade : </td> 
+                    <td > <input  type="text" name="gradeNumber" class="inputText"/> </td>
+					
+					
+				</tr>
+            
+        </table>
+      </form>
+        
+</body>
+</html>

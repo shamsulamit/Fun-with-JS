@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Form Garde</title>
+</head>
+	
+	
+
+<body>
+	<script>
+        
+    function grade() {
+    var n = "Name","";
+    var c = "Calss","";
+	var x = "Please enter Number Between 0-60 of Theory.", "";
+	var y = "Please enter Number Between 0-40 of MCQ.", "";
+        
+    if(x<=19 || y<=12){
+            document.write("You aren't pass individually. "+(x+y)+ " - Fail");
+        }else if(x+y>=0 && x+y<=32){
+            document.write(x+y +" = " + " Fail.");
+        }else if(x+y>=33 && x<=39){
+            document.write(x+y +" = " + " D.");   
+        }else if(x+y>=40 && x+y<=49){
+            document.write(x+y +" = " + " C.");   
+        }else if(x+y>=50 && x+y<=59){
+            document.write(x+y40 +" = " + " B.");   
+        }else if(x+y>=60 && x+y<=69){
+            document.write(x+y +" = " + " A-.");   
+        }else if(x+y>=70 && x+y<=79){
+            document.write(x+y +" = " + " A.");   
+        }else if(x+y>=80 && x+y<=100){
+            document.write(x+y +" = " + " A+.");   
+        }else{
+            document.write("Please Enter Value Between 0- 100");
+        }
+        
+    
+        
+        
+	</script>
+	
+    <form name="data">
+        Name:<br>
+        <input type="text" value=""><br>
+        Class:<br>
+        <input type="text" value=""><br>
+        Number Theory (0-60):<br>
+        <input type="number" value="class"><br>
+        Number MCQ (0-40):<br>
+        <input type="number" value="class"><br>
+        <br>
+        <button onClick="grade">Submit</button><br>
+        <br>
+        <textarea rows="10px" cols="40px">
+        </textarea>
+        
+    </form>
+	
+	
+</body>
+</html>

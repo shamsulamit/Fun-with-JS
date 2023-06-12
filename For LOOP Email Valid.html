@@ -1,0 +1,19 @@
+<html>
+<head><title>For Loop</title>
+    <script>
+        var found = "Email Address Is Messing @ Symbol.";
+        var newemail = prompt("Please Enter Your Mail Address", "");
+            for(var counter=0; counter<=newemail.length; counter++){
+                var find=newemail.charAt(counter);
+                if (find=="@"){
+                    found= "Email Address Has @ Symbol.";
+                }
+            }
+        document.write(found);
+        
+    </script>
+</head>
+    <body>
+        
+    </body>
+</html>

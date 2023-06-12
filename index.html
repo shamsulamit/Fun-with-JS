@@ -1,0 +1,32 @@
+<!doctype Html>
+<html>
+    <head>
+        <script>
+             var sample2= new Image()
+            sample2.src="Penguins.jpg"
+            var sample1= new Image()
+            sample1.src="Tulips.jpg"
+            function switch2() {
+                document.sample.src=sample2.src
+            }function switch1() {
+                document.sample.src=sample1.src
+            }
+        </script>
+    </head>
+    
+    <body>
+        
+            
+         
+<a href="#" onmouseover="switch2()" onmouseout="switch1()"><img name="sample"
+            src="Tulips.jpg" border=0>
+        </a>
+            
+            <script>
+            var yourname;
+            yourname=prompt("Enter your Name:","");
+            document.write("WelCome," +yourname);
+            </script>
+        
+    </body>
+</html>

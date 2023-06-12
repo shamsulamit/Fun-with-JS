@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+<script>
+    function numCheck(){
+
+        var number_1 = parseInt(document.myform.number_1.value);
+        var number_2 = parseInt(document.myform.number_2.value);
+        var number_3 = parseInt(document.myform.number_3.value);
+        
+        if((number_1 > number_2) && (number_2 > number_3)){
+            document.write("Number 1 is the leargest Number: "+number_1);
+           }else if((number_2 > number_1) && (number_1 > number_3)){
+            document.write("Number 2 is the leargest Number: "+number_2); 
+           }else{
+            document.write("Number 3 is the leargest Number: "+number_3); 
+           }
+    }
+
+</script>
+
+</head>
+<body>
+
+	<form name="myform">
+            Number 1: <input type="text" name="number_1" /><br/><br/>
+            Number 2: <input type="text" name="number_2" /><br/><br/>
+            Number 3: <input type="text" name="number_3" /><br/><br/>
+                      <input type="button" value="Check" onClick="numCheck()"/>
+    </form>
+
+</body>
+</html>

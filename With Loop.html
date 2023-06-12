@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Form</title>
+    <script>
+    function showEM(){
+        with(document.customer){
+            var alpha=name.value;
+            var beta=class.value;
+            var gamma=roll.value;
+            var delta=email.value;
+            var epsilon=gender.value;
+        }
+        var fullname=alpha+"<br/>";
+        var details="Class: "+beta+" "+"Roll: "+gamma+"+"gender: "+epsilon+"<br/>";
+        var email=delta;
+        alert(fullname+details+email);
+        }
+    </script>
+    
+    
+    
+    
+    
+</head>
+
+<body>
+	<h1 >HTML Form</h1>
+
+
+		<form name="customer">
+Name: <br/>
+	<td><input type="text" name="name" required>
+	<br/>
+
+Class:<br/> 
+	<input type="text" name="class">
+	<br/>
+	
+Roll:<br/>
+	<input type="number" name="roll">
+	<br/>
+
+	
+Email<br/>
+	<input type="email" name="email" value="">
+	<br/>
+	
+
+<input type=button value="submit" onclick="showEm()" >
+	
+</form>	
+	
+	
+	
+</body>
+</html>

@@ -1,0 +1,33 @@
+<html>
+    <head>
+<title>NAME & EMAIL</title>
+    </head>
+    
+    <body>   
+<table width="600px" border="1px"> 
+    <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Phone Number</th>
+    </tr>
+    
+    <script>
+       var data ="a a@gmail.com 10000,b b@gmail.com 20000,c c@gmail.com 30000,d d@gmail.com 40000,d d@gmail.com 40000,d d@gmail.com 40000,d d@gmail.com 40000";
+        
+        var data2= data.split(/[,]+/);
+        
+        for (i=0; i<data2.length; i++){
+            var data3 = data2[i].split(/[\s]+/);
+            document.write("<tr>"+
+                           "<td>"+data3[0]+"</td>"+
+                           "<td>"+data3[1]+"</td>"+
+                           "<td>"+data3[2]+"</td>"+
+                           "</tr>"
+                           );
+        }
+    </script>
+    
+</table>
+    </body>
+    
+</html>

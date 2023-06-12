@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Color Change</title>
+
+<script type="text/javascript">
+	function color(){
+		var x = document.myform.menu.value;
+		document.bgColor=x;
+	}
+
+
+</script>
+
+</head>
+<body>
+
+	<form name="myform">
+		<select name="menu" onchange="color()">
+			<option value="shamsul">Red</option>
+			<option value="zahid">Green</option>
+			<option value="kabir">Black</option>
+			<option value="firoz">Blue</option>
+			<option value="rony">Skyblue</option>
+			<option value="arif">Orange</option>
+			<option value="numan">Unknown</option>
+		</select>
+
+	</form>
+
+</body>
+</html>

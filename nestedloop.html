@@ -1,0 +1,29 @@
+<html>
+<head><title>For Loop</title>
+    
+    <script>
+        
+        var teamA = "";
+        var teamMem =0;
+        team:
+            for(var outCount=1;outCount<3;outCount++){
+        jersey:
+            for(var inCount=20;inCount<35;inCount++){
+                if(inCount==22||inCount==29||inCount==30){
+                continue jersey;
+                }
+                if (teamMem==12){
+                teamMem=0
+                }
+                teamMem++;
+        teamA+=" Team "+outCount+" Member "+teamMem+" Jersey Number "+inCount+"</br>";
+                }
+            }
+        document.write(teamA);
+        
+    </script>
+</head>
+    <body>
+        
+    </body>
+</html>

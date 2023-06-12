@@ -1,0 +1,88 @@
+<html>
+	<head>
+		<title>Evidence 1</title>
+	</head>
+	
+	<body>
+		
+		<script>
+		function win(){
+			
+		var myname = document.myform.myname.value;	
+			if(myname==""){
+			   	alert("Name Should Not be Empty");
+				return false;
+		   }else{
+			   	var myname = "Name: "+myname+".<br/>";
+		   }	
+			
+		var myemail = document.myform.myemail.value;
+			if(myemail.indexOf("@")<1){
+				alert("Insert a valid Email")
+				return false;
+		   }else{
+			    myemail = "Email: "+myemail+"<br/>";
+		   }
+			
+		var mypassword = document.myform.mypassword.value;
+			if(mypassword.length<6 || mypassword.length>12){
+				alert("Insert Password between 6 to 12 digit")
+				return false;
+			}else{
+				mypassword = "Password: "+mypassword+"<br/>";
+			}
+		
+		var gender = document.myform.gender.value;
+				gender = "Gender: "+gender+"<br/>"
+            
+        var interest = document.myform.interest;
+        var hobby = "Hobby: ";
+            for(i=0;i<interest.length;i++){
+                if(interest[i].checked){
+                hobby+=interest[i].value+" ";
+                }
+            }
+                hobby+="<br/>"
+                     
+        var city = document.myform.city.value;
+                city = "City: "+city+"<br/>"
+			
+		var details = document.myform.details.value;
+                details = "Details: "+details+"<br/>"
+			
+		var popup = open("","mywindow", "width=400 ,height=400");
+        
+			popup.document.write (myname+myemail+mypassword+gender+hobby+city+details+"<br/>");
+            
+		}
+		</script>
+		
+		
+		<form name="myform">
+		Name: <input type="text" name="myname"/><br/><br/>
+		Email: <input type="text" name="myemail"/><br/><br/>
+		Pass-Word: <input type="tel" name="mypassword"/><br/><br/>
+		Gender: <input type="radio" name="gender" value="Male" checked/>Male
+				<input type="radio" name="gender" value="Female"/>Female
+				<br/><br/>
+		Hobby: 
+			<input type="checkbox" name="interest" value="Painting"/>Painting
+			<input type="checkbox" name="interest" value="Traveling"/>Traveling
+			<input type="checkbox" name="interest" value="Singing"/>Singing
+			<br/><br/>
+		City:
+		<select name="city">
+			<option value="Dhaka">Dhaka</option>
+			<option value="Khulna">Khulna</option>
+			<option value="Sylhet">Sylhet</option>
+			<option value="Borishal">Borishal</option>
+		</select>
+			<br/><br/>
+		Details:
+			<textarea name="details"></textarea>
+			<br/><br/>
+		<input type="button" value="Submit" onClick="win()"/>	
+		</form>
+			
+	</body>
+</html>

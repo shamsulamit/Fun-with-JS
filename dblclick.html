@@ -1,0 +1,32 @@
+<html>
+    <head>
+    <title></title>
+        
+        <script>
+            function doubleUp(){
+                window.location ="https://www.google.com";
+            }
+            function forwardTo(){
+                var alpha = history.forward();
+            }
+        
+        </script>
+        
+    </head>
+    <body>
+    
+    <form>
+        Double Click 1st Button:
+        <input type= button value="Two Clicks Here"
+            onDblClick="doubleUp()"><br>
+            when you return ,click this button.
+            <input type=button value="Go Forward"
+                   onClick="forwardTo()">
+        
+        `
+    </form>
+    
+    
+    
+    </body>
+</html>
